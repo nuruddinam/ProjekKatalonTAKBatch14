@@ -17,19 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('Blocks/Reusable_tc/Open_Browser'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
+WebUI.callTestCase(findTestCase('Blocks/Positive_tc/Page_login/LG0001_Login_Valid'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Record/a_Make Appointment'))
-
-WebUI.setText(findTestObject('Object Repository/Record/input_Username_txt-username'), CustomKeywords.'Utilities.randomInt'(0)
-
-WebUI.setEncryptedText(findTestObject('Object Repository/Record/input_Password_txt-password'), 'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM')
-
-WebUI.click(findTestObject('Object Repository/Record/button_Login'))
-
-WebUI.verifyElementText(findTestObject('Record/p_Login failed Please ensure the username a_eb55b5'), 'Login failed! Please ensure the username and password are valid.')
-
-WebUI.verifyElementVisible(findTestObject('Record/label_Comment'), FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Blocks/Positive_tc/Page_makeAppointment/LG0002_Make_Appointment'), [:], FailureHandling.STOP_ON_FAILURE)
 

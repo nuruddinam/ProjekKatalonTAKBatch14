@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>default</name>
+   <name>Dev</name>
    <tag></tag>
-   <defaultProfile>true</defaultProfile>
+   <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://katalon-demo-cura.herokuapp.com/'</initValue>
+      <initValue>'https://www.google.com/'</initValue>
       <name>base_url</name>
       <protected>false</protected>
       <valueType>STRING</valueType>

@@ -17,19 +17,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.verifyElementText(findTestObject('Page_appointmentConfirmation/p_Facility'), '')
 
-WebUI.navigateToUrl('https://katalon-demo-cura.herokuapp.com/')
+WebUI.verifyElementText(findTestObject('Page_appointmentConfirmation/p_Readmission'), '')
 
-WebUI.click(findTestObject('Object Repository/Record/a_Make Appointment'))
+WebUI.verifyElementText(findTestObject('Page_appointmentConfirmation/p_HealtcareProgram'), '')
 
-WebUI.setText(findTestObject('Object Repository/Record/input_Username_txt-username'), CustomKeywords.'Utilities.randomInt'(0)
+WebUI.verifyElementText(findTestObject('Page_appointmentConfirmation/p_visitDate'), '')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Record/input_Password_txt-password'), 'g3/DOGG74jC3Flrr3yH+3D/yKbOqqUNM')
-
-WebUI.click(findTestObject('Object Repository/Record/button_Login'))
-
-WebUI.verifyElementText(findTestObject('Record/p_Login failed Please ensure the username a_eb55b5'), 'Login failed! Please ensure the username and password are valid.')
-
-WebUI.verifyElementVisible(findTestObject('Record/label_Comment'), FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyElementText(findTestObject('Page_appointmentConfirmation/p_Comment'), '')
 
